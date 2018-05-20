@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MagisterFluentAPI.Models.Cursos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Professores.NomeProfessor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCurso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCredito)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Professores.NomeProfessor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCurso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCredito)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodigoCurso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodigoCurso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodigoCurso })
+        </td>
+    </tr>
+}
+
+</table>

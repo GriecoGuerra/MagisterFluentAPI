@@ -1,0 +1,34 @@
+﻿@model MagisterFluentAPI.Models.Matrizes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matrizes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cursos.NomeCurso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cursos.NomeCurso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplinas.NomeDisciplina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disciplinas.NomeDisciplina)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

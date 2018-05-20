@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MagisterFluentAPI.Models.Historicos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alunos.NomeAluno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disciplinas.NomeDisciplina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodosLetivos.Ano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Situacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Media)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faltas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alunos.NomeAluno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Disciplinas.NomeDisciplina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodosLetivos.Ano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Situacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Media)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faltas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

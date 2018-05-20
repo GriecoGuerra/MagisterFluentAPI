@@ -1,0 +1,90 @@
+﻿@model MagisterFluentAPI.Models.Matriculas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matriculas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alunos.NomeAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alunos.NomeAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplinas.NomeDisciplina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disciplinas.NomeDisciplina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriodosLetivos.Ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriodosLetivos.Ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faltas1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faltas1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faltas2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faltas2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faltas3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faltas3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

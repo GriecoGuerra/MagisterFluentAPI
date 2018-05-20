@@ -1,0 +1,64 @@
+﻿@model MagisterFluentAPI.Models.Disciplinas
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Disciplinas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDisciplina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDisciplina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creditos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creditos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDisciplina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDisciplina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargaHoraria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargaHoraria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimiteFaltas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LimiteFaltas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

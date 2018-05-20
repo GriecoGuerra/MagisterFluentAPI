@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MagisterFluentAPI.Models.Disciplinas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeDisciplina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creditos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDisciplina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargaHoraria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LimiteFaltas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDisciplina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creditos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDisciplina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CargaHoraria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LimiteFaltas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodigoDisciplina }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodigoDisciplina }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodigoDisciplina })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model MagisterFluentAPI.Models.Alunos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Alunos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cursos.NomeCurso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cursos.NomeCurso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCredito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCredito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mgp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mgp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MatriculaAluno }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
